@@ -28,7 +28,8 @@
 
 ### Usage
 
--
+- "Search" tab: search by book name, view, save button
+- "Saved" tab: view saved books, delete button
 
 ### License
 
