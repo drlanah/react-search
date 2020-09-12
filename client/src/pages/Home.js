@@ -12,41 +12,39 @@ class Home extends Component {
   state = {
     books: [],
     q: "",
-    message: "Search For A Book To Begin!",
+    message: "Search For A Book To Begin!"
   };
 
-  handleInputChange = (event) => {
-    console.log("InputChange@@@");
+  handleInputChange = event => {
     const { name, value } = event.target;
     this.setState({
-      [name]: value,
+      [name]: value
     });
   };
 
   getBooks = () => {
     API.getBooks(this.state.q)
-      .then((res) =>
+      .then(res =>
         this.setState({
-          books: res.data,
+          books: res.data
         })
       )
       .catch(() =>
         this.setState({
           books: [],
-          message: "No New Books Found, Try a Different Query",
+          message: "No New Books Found, Try a Different Query"
         })
       );
   };
 
-  handleFormSubmit = (event) => {
-    console.log("SubmitBtn@@@");
+  handleFormSubmit = event => {
     event.preventDefault();
     this.getBooks();
   };
 
-  handleBookSave = (id) => {
-    console.log("save btn hit@@@");
-    const book = this.state.books.find((book) => book.id === id);
+  handleBookSave = id => {
+    const book = this.state.books.find(book => book.id === id);
+
     API.saveBook({
       googleId: book.id,
       title: book.volumeInfo.title,
@@ -54,7 +52,7 @@ class Home extends Component {
       link: book.volumeInfo.infoLink,
       authors: book.volumeInfo.authors,
       description: book.volumeInfo.description,
-      image: book.volumeInfo.imageLinks.thumbnail,
+      image: book.volumeInfo.imageLinks.thumbnail
     }).then(() => this.getBooks());
   };
 
@@ -63,13 +61,11 @@ class Home extends Component {
       <Container>
         <Row>
           <Col size="md-12">
-            <Jumbotron id="jumbotron">
-              <h1 className="text-center jumbotitle">
-                <strong>Google Books Search</strong>
+            <Jumbotron>
+              <h1 className="text-center">
+                <strong>(React) Google Books Search</strong>
               </h1>
-              <h2 className="text-center jumbotitle">
-                Search for and Save Books of Interest.
-              </h2>
+              <h2 className="text-center">Search for and Save Books of Interest.</h2>
             </Jumbotron>
           </Col>
           <Col size="md-12">
@@ -87,7 +83,7 @@ class Home extends Component {
             <Card title="Results">
               {this.state.books.length ? (
                 <List>
-                  {this.state.books.map((book) => (
+                  {this.state.books.map(book => (
                     <Book
                       key={book.id}
                       title={book.volumeInfo.title}

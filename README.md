@@ -24,7 +24,7 @@
 - npm i
 - npm start
 
-- Heroku link:
+- Heroku link: https://secure-stream-29092.herokuapp.com/
 
 ### Usage
 

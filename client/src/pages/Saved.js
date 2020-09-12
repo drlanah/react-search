@@ -9,7 +9,7 @@ import { List } from "../components/List";
 
 class Saved extends Component {
   state = {
-    books: [],
+    books: []
   };
 
   componentDidMount() {
@@ -18,17 +18,16 @@ class Saved extends Component {
 
   getSavedBooks = () => {
     API.getSavedBooks()
-      .then((res) =>
+      .then(res =>
         this.setState({
-          books: res.data,
+          books: res.data
         })
       )
-      .catch((err) => console.log(err));
+      .catch(err => console.log(err));
   };
 
-  handleBookDelete = (id) => {
-    console.log("delete@@@@@");
-    API.deleteBook(id).then((res) => this.getSavedBooks());
+  handleBookDelete = id => {
+    API.deleteBook(id).then(res => this.getSavedBooks());
   };
 
   render() {
@@ -37,10 +36,10 @@ class Saved extends Component {
         <Row>
           <Col size="md-12">
             <Jumbotron>
-              <h1 className="text-center jumbotitle">
-                <strong>Google Books Search</strong>
+              <h1 className="text-center">
+                <strong>(React) Google Books Search</strong>
               </h1>
-              <h2 className="text-center jumbotitle">Search and Save Books</h2>
+              <h2 className="text-center">Search for and Save Books of Interest.</h2>
             </Jumbotron>
           </Col>
         </Row>
@@ -49,7 +48,7 @@ class Saved extends Component {
             <Card title="Saved Books" icon="download">
               {this.state.books.length ? (
                 <List>
-                  {this.state.books.map((book) => (
+                  {this.state.books.map(book => (
                     <Book
                       key={book._id}
                       title={book.title}
