@@ -18,10 +18,14 @@ if (process.env.NODE_ENV === "production") {
 app.use(routes);
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || process.env.mongo_key, {
-  useCreateIndex: true,
-  useNewUrlParser: true,
-});
+mongoose.connect(
+  process.env.MONGODB_URI ||
+    "mongodb+srv://somerandomuser:supersecretpassword@cluster0.vsbz7.mongodb.net/react-search?retryWrites=true&w=majority",
+  {
+    useCreateIndex: true,
+    useNewUrlParser: true,
+  }
+);
 
 // Start the API server
 app.listen(PORT, () =>
