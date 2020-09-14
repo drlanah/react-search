@@ -24,7 +24,8 @@
 - npm i
 - npm start
 
-- Heroku link: https://secure-stream-29092.herokuapp.com/
+- [Heroku](https://secure-stream-29092.herokuapp.com/)
+- [GitHub](https://github.com/drlanah/react-search)
 
 ### Usage
 
@@ -37,4 +38,4 @@
 
 ### Contact
 
-- Github: https://github.com/drlanah
+- [Lana](https://github.com/drlanah)
