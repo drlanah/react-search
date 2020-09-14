@@ -21,8 +21,16 @@
 
 ### Installation
 
-- npm i
-- npm start
+- Note: This works from local host, glitching in heroku...
+
+- Run the following code in with the main folder, and also within the "client" folder:
+```
+npm install
+```
+- To start the app from local host:
+```
+npm start
+```
 
 - [Heroku](https://secure-stream-29092.herokuapp.com/)
 - [GitHub](https://github.com/drlanah/react-search)
