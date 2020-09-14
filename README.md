@@ -29,7 +29,6 @@ npm install
 - To start the app from local host:
 ```
 npm start
-
 ```
 
 - [Heroku](https://secure-stream-29092.herokuapp.com/)
