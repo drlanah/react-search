@@ -21,7 +21,8 @@
 
 ### Installation
 
-- npm i
+- Note: This works from local host, glitching in heroku...
+- npm install
 - npm start
 
 - [Heroku](https://secure-stream-29092.herokuapp.com/)
