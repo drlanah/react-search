@@ -22,6 +22,7 @@
 ### Installation
 
 - Note: This works from local host, glitching in heroku...
+
 - Run the following code in with the main folder, and also within the "client" folder:
 ```
 npm install
